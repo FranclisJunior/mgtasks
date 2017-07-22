@@ -5,12 +5,16 @@ import {
     EntityDetailsComponent, ShowLineComponent,
     ListingTableComponent
 } from 'angularm';
+import { ListingMyCardComponent } from "app/listing-my-card/listing-my-card.component";
 
 export let defineRules = (angularm: AngularmService) => {
     angularm
         .ptr('form_line', '*', 'code', null, FormLineComponent, { inputType: 'number' })
         .dptr('form_line', FormLineComponent, { inputType: 'text' })
         .dpr('show_line', ShowLineComponent)
+        .etr('list_entities', 'testcase', ListingMyCardComponent)
+        .etr('list_entities', 'quiz', ListingMyCardComponent)
+        .etr('list_entities', 'course', ListingMyCardComponent)
         .detr('list_entities', ListingTableComponent)
         .der('table_line', EntityLineComponent)
         .der('show_entity', EntityDetailsComponent)

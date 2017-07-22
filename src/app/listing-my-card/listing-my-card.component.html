@@ -1,0 +1,16 @@
+<div *ngIf="entityType">
+    <h1>Listing {{ entityType.plural | titleCase }}</h1>
+
+
+  <ul class="w3-ul w3-hoverable"> 
+      <li [ngClass]="'w3-border'" *ngFor="let entity of entities"> 
+        <p *ngFor="let property of entity.mountProperties()">
+          <span [ngClass]="'w3-tag w3-blue'" *ngIf="property.value">{{property.value}}</span>
+          </p>
+      </li>
+  </ul>
+
+  <a href="#" (click)="create()">New {{entityType.singular | titleCase}}</a>
+  <a href="#" (click)="back()">Back</a>
+
+</div>
