@@ -16,6 +16,8 @@ import { EntityLineComponent, CreateEntityComponent, FormLineComponent,
   ShowLineComponent, ListingTableComponent } from 'angularm';
 
 import { AppComponent } from './app.component';
+import { MyTableListComponent } from './my-table-list/my-table-list.component';
+import { MyTableLineComponent } from './my-table-line/my-table-line.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,7 +31,9 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyTableListComponent,
+    MyTableLineComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +58,9 @@ const appRoutes: Routes = [
     EditFormLineComponent,
     EntityDetailsComponent, 
     ShowLineComponent,
-    ListingTableComponent
+    ListingTableComponent,
+    MyTableListComponent,
+    MyTableLineComponent
   ],
   bootstrap: [AppComponent]
 })
