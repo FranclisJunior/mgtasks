@@ -1,0 +1,10 @@
+        <input
+          type="{{configuration.inputType}}"
+          id="{{propertyType.entityType.singular}}_{{propertyType.name}}"
+          placeholder="{{propertyType.name | titleCase}}"
+          [formControl]="mgFormControl"
+          [ngClass]="configuration.inputClass">
+          <label for="{{propertyType.entityType.singular}}_{{propertyType.name}}"
+            >{{propertyType.name | titleCase}}</label>
+            <p></p>
+        <br>
